@@ -90,7 +90,7 @@ header {
 }
 
 section {
-  padding: 100px 18%;
+  padding: 100px 18% 0 18%;
 }
 .home {
   min-height: 100vh;
@@ -224,11 +224,12 @@ header.sticky {
   gap: 10px;
 } */
 
-/* .welcome h2 {
-  font-size: 3rem;
-  font-weight: 500;
-  margin-bottom: 2px;
-} */
+.welcome {
+  background: url(../img/background.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 100px;
+}
 
 .welcome .btn {
   padding: 10px 20px;
@@ -239,6 +240,7 @@ header.sticky {
   grid-template-columns: repeat(2, 2fr);
   align-items: center;
   grid-gap: 2rem;
+  margin-top: 30px;
 }
 .about-img img {
   max-width: 100%;
@@ -628,11 +630,11 @@ header.sticky {
 
 /* conctact form */
 .contactus {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* min-height: 100vh; */
+  /* width: 100%; */
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 .container {
   width: 85%;
