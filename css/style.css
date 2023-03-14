@@ -178,6 +178,10 @@ header.sticky {
   box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 }
 
+.sub-service {
+  padding-bottom: 120px;
+}
+
 .items {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
@@ -569,6 +573,9 @@ header.sticky {
     --p-font: 1rem;
     transition: 0.3s;
   }
+  .sub-service {
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 970px) {
@@ -615,6 +622,7 @@ header.sticky {
   }
   .home-text {
     padding-top: 55px;
+    text-align: center;
   }
   .home-img {
     text-align: center;
@@ -784,5 +792,8 @@ header.sticky {
   .container .content .right-side {
     width: 100%;
     margin-left: 0;
+  }
+  .contact {
+    padding: 70px 10px;
   }
 }
