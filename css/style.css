@@ -215,15 +215,6 @@ header.sticky {
     scale3d(1.05, 1.05, 1.05);
 }
 
-/* .welcome {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-} */
-
 .welcome {
   background: url(../img/background.jpg);
   background-size: cover;
@@ -231,8 +222,16 @@ header.sticky {
   padding-bottom: 100px;
 }
 
-.welcome p {
+.welcome .heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.welcome-text {
+  /* text-align: center; */
+  max-width: 75%;
 }
 
 .welcome .btn {
@@ -634,11 +633,11 @@ header.sticky {
 
 /* conctact form */
 .contactus {
-  /* min-height: 100vh; */
-  /* width: 100%; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
+  min-height: 88vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .container {
   width: 85%;
