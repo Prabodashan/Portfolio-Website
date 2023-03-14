@@ -108,8 +108,13 @@ section {
 .home-text h1 {
   margin: 10px 0px 25px;
   font-size: var(--big-font);
-  line-height: 1;
-  font-weight: 500;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+.home-text h1 span {
+  font-size: 4.5rem;
 }
 .home-text h5 {
   margin-bottom: 23px;
@@ -121,7 +126,7 @@ span {
 }
 .home-text h3 {
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
 }
 .home-text p {
@@ -153,7 +158,7 @@ span {
   color: var(--bg-color);
   background: var(--main-color);
   font-size: var(--p-font);
-  padding: 10px 40px;
+  padding: 20px 40px;
   font-weight: 500;
   line-height: 24px;
   border-radius: 30px;
@@ -208,6 +213,25 @@ header.sticky {
   will-change: transform;
   transform: perspective(1000px) rotateX(4.8deg) rotateY(10.23deg)
     scale3d(1.05, 1.05, 1.05);
+}
+
+/* .welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+} */
+
+/* .welcome h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2px;
+} */
+
+.welcome .btn {
+  padding: 10px 20px;
 }
 
 .about {
@@ -287,41 +311,58 @@ header.sticky {
   left: 0;
   border-radius: 12px;
   transition: all 0.4s;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .layer:hover {
   background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, #191919);
 }
 .layer h3 {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   font-size: 25px;
   font-weight: 500;
   color: var(--bg-color);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* bottom: 0; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   opacity: 0;
   transition: all 0.4s;
 }
 .layer:hover h3 {
-  bottom: 52%;
+  /* bottom: 52%; */
   opacity: 1;
 }
 
 .layer h5 {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   font-size: 17px;
   font-weight: 500;
   color: var(--bg-color);
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  /* bottom: 0; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
   opacity: 0;
   transition: all 0.4s;
+  margin-bottom: 10px;
 }
 .layer:hover h5 {
-  bottom: 48%;
+  /* bottom: 48%; */
+  opacity: 1;
+}
+
+.layer .btn {
+  opacity: 0;
+  transition: all 0.4s;
+  padding: 10px 20px;
+}
+
+.layer:hover .btn {
+  /* bottom: 48%; */
   opacity: 1;
 }
 
@@ -428,7 +469,7 @@ header.sticky {
 .center h3 {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 3px;
+  margin-bottom: 30px;
   color: var(--bg-color);
 }
 .center p {
