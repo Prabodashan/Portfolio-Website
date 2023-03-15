@@ -35,7 +35,7 @@ header {
 }
 .logo img {
   max-width: 100%;
-  width: 130px;
+  width: 250px;
   height: auto;
 }
 .navlist {
@@ -574,7 +574,7 @@ header.sticky {
     transition: 0.3s;
   }
   .sub-service {
-    padding-bottom: 0;
+    padding-bottom: 8%;
   }
 }
 
