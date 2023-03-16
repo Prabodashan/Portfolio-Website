@@ -41,20 +41,23 @@ function sendMail() {
   let message = document.forms["contactForm"]["message"].value;
   if (name == "") {
     document.getElementById("error").innerHTML = "Name must be filled out";
-    return false;
+    // return false;
+  } else if (email == "") {
+    document.getElementById("error").innerHTML = "Email must be filled out";
+    // return false;
+  } else if (!email.match(mailFormat)) {
+    document.getElementById("error").innerHTML = "Invalid email address!";
+    // return false;
+  } else if (message == "") {
+    document.getElementById("error").innerHTML = "Message must be filled out";
+    // return false;
+  } else {
+    document.getElementById("success").innerHTML = "Thank you for your message";
   }
-  if (email == "") {
-    document.getElementById("error").innerHTML = "email must be filled out";
-    return false;
-  }
-  if (!email.match(mailFormat)) {
-    document.getElementById("error").innerHTML = "invalid email address!";
-    return false;
-  }
-  if (message == "") {
-    document.getElementById("error").innerHTML = "message must be filled out";
-    return false;
-  }
+  setTimeout(alertFunc, 3000);
+}
 
-  document.getElementById("success").innerHTML = "thank you for your message";
+function alertFunc() {
+  document.getElementById("success").innerHTML = "";
+  document.getElementById("error").innerHTML = "";
 }
