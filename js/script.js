@@ -27,7 +27,7 @@ sr.reveal(".home-text", { delay: 350, origin: "left" });
 sr.reveal(".home-img", { delay: 350, origin: "right" });
 
 sr.reveal(
-  ".sub-service,.about,.portfolio,.service,.cta,.contact,.welcome, .contactus,.about-data, .careers",
+  ".sub-service,.about,.portfolio,.service,.cta,.contact,.welcome, .contactus,.about-data, .careers, .our-team",
   {
     delay: 200,
     origin: "bottom",
@@ -61,3 +61,62 @@ function alertFunc() {
   document.getElementById("success").innerHTML = "";
   document.getElementById("error").innerHTML = "";
 }
+
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    950: {
+      slidesPerView: 3,
+    },
+  },
+});
+var swiper = new Swiper(".slide-content-service", {
+  slidesPerView: 2,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: "true",
+  fade: "true",
+  grabCursor: "true",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 1,
+    },
+    950: {
+      slidesPerView: 2,
+    },
+  },
+});
