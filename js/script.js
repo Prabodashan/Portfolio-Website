@@ -27,7 +27,7 @@ sr.reveal(".home-text", { delay: 350, origin: "left" });
 sr.reveal(".home-img", { delay: 350, origin: "right" });
 
 sr.reveal(
-  ".sub-service,.about,.portfolio,.service,.cta,.contact,.welcome, .contactus,.about-data, .careers, .our-team",
+  ".sub-service,.about,.portfolio,.service,.cta,.contact,.welcome, .contactus,.about-data, .careers, .our-team, .about2",
   {
     delay: 200,
     origin: "bottom",
