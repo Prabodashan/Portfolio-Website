@@ -75,7 +75,13 @@
               tutorial, you can send me message from here. It's my pleasure to
               help you.
             </p>
-            <form name="contactForm" action="#">
+            <form
+              name="careerForm"
+              action="careers.php"
+              onsubmit="return sendCv()"
+              method="POST"
+              enctype="multipart/form-data"
+            >
               <div class="input-box">
                 <input type="text" name="name" placeholder="Enter your name" />
               </div>
@@ -87,7 +93,13 @@
                 />
               </div>
               <div class="input-box">
-                <input type="file" name="file" placeholder="Upload your CV" />
+                <input
+                  type="file"
+                  class="custom-file"
+                  name="file"
+                  accept="application/pdf"
+                  placeholder="Upload your CV"
+                />
               </div>
               <div class="input-box message-box">
                 <textarea
@@ -98,7 +110,7 @@
                 ></textarea>
               </div>
               <div class="button">
-                <input type="button" value="Send Now" onclick="sendMail()" />
+                <input type="submit" value="Send Now" />
               </div>
               <br />
               <br />
@@ -117,7 +129,51 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
 
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
     <!--------Link to js---->
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script>
+      function sendCv() {
+        var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        let name = document.forms["careerForm"]["name"].value;
+        let email = document.forms["careerForm"]["email"].value;
+        let message = document.forms["careerForm"]["message"].value;
+        let file = document.forms["careerForm"]["file"];
+        if (name == "") {
+          document.getElementById("error").innerHTML =
+            "Name must be filled out";
+          setTimeout(alertFunc, 3000);
+          return false;
+        } else if (email == "") {
+          document.getElementById("error").innerHTML =
+            "Email must be filled out";
+          setTimeout(alertFunc, 3000);
+          return false;
+        } else if (!email.match(mailFormat)) {
+          document.getElementById("error").innerHTML = "Invalid email address!";
+          setTimeout(alertFunc, 3000);
+          return false;
+        } else if (file.files.length == 0) {
+          document.getElementById("error").innerHTML = "No files selected";
+          setTimeout(alertFunc, 3000);
+          return false;
+        } else if (message == "") {
+          document.getElementById("error").innerHTML =
+            "Message must be filled out";
+          setTimeout(alertFunc, 3000);
+          return false;
+        }
+        setTimeout(alertFunc, 3000);
+        return true;
+      }
+
+      function alertFunc() {
+        document.getElementById("success").innerHTML = "";
+        document.getElementById("error").innerHTML = "";
+      }
+    </script>
   </body>
 </html>

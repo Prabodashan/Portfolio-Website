@@ -702,7 +702,6 @@ header.sticky {
   width: 85%;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
-  
 }
 .container2 {
   width: 100%;
@@ -788,7 +787,7 @@ header.sticky {
   display: inline-block;
   margin-top: 12px;
 }
-.right-side .button input[type="button"] {
+.right-side .button input[type="submit"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -799,7 +798,7 @@ header.sticky {
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.button input[type="button"]:hover {
+.button input[type="submit"]:hover {
   transform: scale(1.1);
 }
 
@@ -929,6 +928,15 @@ header.sticky {
 }
 .button:hover {
   transform: scale(1.1);
+}
+
+.custom-file::-webkit-file-upload-button {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .swiper-navBtn {

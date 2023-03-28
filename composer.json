@@ -1,0 +1,7 @@
+{
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "phpfastcache/phpfastcache": "^9.1",
+        "vlucas/phpdotenv": "^5.5"
+    }
+}

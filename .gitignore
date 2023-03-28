@@ -1,0 +1,23 @@
+# Ignore vendor directory
+/vendor
+
+# Ignore composer.lock file
+composer.lock
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore log files
+/log/*.log
+
+# Ignore cache and session files
+/var/cache/*
+/var/sessions/*
+
+# Ignore compiled files
+*.phpc
+
+# Ignore IDE files and directories
+.idea
+.vscode

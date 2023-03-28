@@ -96,7 +96,12 @@
               tutorial, you can send me message from here. It's my pleasure to
               help you.
             </p>
-            <form name="contactForm" action="#">
+            <form
+              name="contactForm"
+              action="contact.php"
+              onsubmit="return sendMail()"
+              method="POST"
+            >
               <div class="input-box">
                 <input type="text" name="name" placeholder="Enter your name" />
               </div>
@@ -116,7 +121,7 @@
                 ></textarea>
               </div>
               <div class="button">
-                <input type="button" value="Send Now" onclick="sendMail()" />
+                <input type="submit" value="Send Now" />
               </div>
               <br />
               <br />
@@ -134,6 +139,9 @@
     </div>
 
     <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
 
     <!--------Link to js---->
     <script type="text/javascript" src="js/script.js"></script>
